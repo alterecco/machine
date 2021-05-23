@@ -15,6 +15,11 @@ ifeq ($(strip $(CUSTOM_REPEAT_KEY_ENABLE)), yes)
 	OPT_DEFS += -DCUSTOM_REPEAT_KEY_ENABLE
 endif
 
+ifeq ($(strip $(CUSTOM_NUM_WORD_ENABLE)), yes)
+	SRC += ./features/num_word.c
+	OPT_DEFS += -DCUSTOM_NUM_WORD_ENABLE
+endif
+
 ifeq ($(strip $(COMBO_ENABLE)), yes)
 	SRC += combos.c
 endif

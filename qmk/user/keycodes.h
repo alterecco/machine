@@ -14,6 +14,8 @@ enum layers
 enum keycodes
 {
   o_RPT_o = SAFE_RANGE,
+  o_STP_o,
+  o_NUM_o,
 
   // Oneshot mods with no timers.
   o_SFT_o,

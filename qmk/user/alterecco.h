@@ -11,3 +11,7 @@
 #ifdef CUSTOM_ONESHOT_ENABLE
 # include "features/oneshot.h"
 #endif
+
+#ifdef CUSTOM_NUM_WORD_ENABLE
+#include "features/num_word.h"
+#endif

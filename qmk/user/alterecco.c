@@ -11,7 +11,7 @@ bool is_oneshot_cancel_key(uint16_t keycode)
   switch (keycode)
   {
   case __NAV__:
-  case __NUM__:
+  // case __NUM__:
     return true;
   default:
     return false;
@@ -23,7 +23,7 @@ bool is_oneshot_ignored_key(uint16_t keycode)
   switch (keycode)
   {
   case __NAV__:
-  case __NUM__:
+  // case __NUM__:
   case _LSHFT_:
   case o_SFT_o:
   case o_CTL_o:
@@ -55,6 +55,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
   }
 #endif
 
+#ifdef CUSTOM_NUM_WORD_ENABLE
+  if (!process_num_word(keycode, record))
+  {
+    return false;
+  }
+#endif
 #ifdef CUSTOM_ONESHOT_ENABLE
   process_oneshot(
     &os_shft_state, _LSHFT_, o_SFT_o,
@@ -79,6 +85,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
     return false;
   }
 #endif
+
+
+  switch (keycode)
+  {
+#ifdef CUSTOM_NUM_WORD_ENABLE
+  case o_NUM_o:
+    process_num_word_activation(record);
+    return false;
+#endif
+  }
 
   return true;
 }
