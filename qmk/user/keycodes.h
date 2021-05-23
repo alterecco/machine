@@ -8,7 +8,7 @@ enum layers
   NAV,
   SYM,
   NUM,
-  SYS,
+  MUS,
 };
 
 enum keycodes
@@ -31,6 +31,7 @@ enum keycodes
 #define __NAV__ OSL(NAV)
 #define __NUM__ OSL(NUM)
 #define o_SPC_o LT(SYM, KC_SPACE)
+#define oMOUSEo MO(MUS)
 
 #define ___A___ KC_A
 #define ___B___ KC_B
@@ -140,3 +141,14 @@ enum keycodes
 
 #define BRI_MIN KC_F14
 #define BRI_MAX KC_F15
+
+#define m_UP__m KC_MS_UP
+#define m_DWN_m KC_MS_DOWN
+#define m_LFT_m KC_MS_LEFT
+#define m_RGT_m KC_MS_RIGHT
+#define m_BT1_m KC_MS_BTN1
+#define m_BT2_m KC_MS_BTN2
+#define m_WHU_m KC_MS_WH_UP
+#define m_WHD_m KC_MS_WH_DOWN
+#define m_WHL_m KC_MS_WH_LEFT
+#define m_WHR_m KC_MS_WH_RIGHT
