@@ -1,4 +1,4 @@
-#include "./keymap.h"
+#include "./keycodes.h"
 
 #ifdef CUSTOM_MODTAP_ENABLE
 # include "features/mod_hold_n_tap.h"

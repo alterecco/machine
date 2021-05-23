@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 #include "tmk_core/common/action.h"
-#include "../keymap.h"
+#include "../keycodes.h"
 
 uint16_t last_key;
 uint16_t last_mods;

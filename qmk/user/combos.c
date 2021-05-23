@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include "config.h"
 #include "process_combo.h"
-#include "keymap.h"
+#include "keycodes.h"
 
 
 const uint16_t PROGMEM undo_combo[] = {KC_F, KC_M, COMBO_END};
