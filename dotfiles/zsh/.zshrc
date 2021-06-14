@@ -1,5 +1,5 @@
 # Quickfixes
-if [[ $OS_NAME == 'macos']]; then
+if [[ $OSTYPE == darwin* ]]; then
   export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 export LC_ALL=en_US.UTF-8
@@ -32,7 +32,7 @@ zinit ice wait'1' lucid; zinit snippet PZT::modules/directory/init.zsh
 # https://github.com/sorin-ionescu/prezto/tree/master/modules/gnu-utility
 zinit snippet PZT::modules/gnu-utility/init.zsh
 
-if [[ $OS_NAME == 'macos']]; then
+if [[ $OSTYPE == darwin* ]]; then
   # TODO: maybe I can avoid this by using the above snippet
   PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 fi
@@ -49,7 +49,7 @@ zinit snippet PZT::modules/history/init.zsh
 # https://github.com/sorin-ionescu/prezto/tree/master/modules/completion
 zinit snippet PZT::modules/completion/init.zsh
 
-if [[ $OS_NAME == 'macos']]; then
+if [[ $OSTYPE == darwin* ]]; then
   # https://github.com/sorin-ionescu/prezto/tree/master/modules/osx
   zinit snippet PZT::modules/osx/init.zsh
 fi
@@ -138,7 +138,7 @@ else
   compinit -C;
 fi
 
-if [[ $OS_NAME == 'macos']]; then
+if [[ $OSTYPE == darwin* ]]; then
   # Setup fzf
   # ---------
   if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
@@ -168,7 +168,7 @@ alias ag=rg
 alias cat=bat
 alias j=z
 
-if [[ $OS_NAME == 'macos']]; then
+if [[ $OSTYPE == darwin* ]]; then
   alias as-amd="PATH=\"/usr/local/opt/arm-gcc-bin@8/bin:/usr/local/opt/avr-gcc@8/bin:/usr/local/bin:$PATH\" /usr/bin/arch -x86_64"
   alias amdbrew="/usr/bin/arch -x86_64 /usr/local/bin/brew"
 fi
