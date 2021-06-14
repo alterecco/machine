@@ -1,3 +1,9 @@
 qmk/firmware
+
 .vscode/c_cpp_properties.json
 .vscode/settings.json
+
+dotfiles/zsh/.zsh_sessions/
+dotfiles/zsh/zinit/
+dotfiles/zsh/.zcompdump
+dotfiles/zsh/.zsh_history

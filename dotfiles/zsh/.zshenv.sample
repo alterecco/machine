@@ -1,0 +1,9 @@
+## Place this file in your home dir and correct it as appropriate
+## Then use the following snippet to test for OS
+## if [[ $OS_NAME == 'macos']]; then
+##  ...
+## fi
+##
+export OS_NAME="macos|linux|..."
+
+export ZDOTDIR="$HOME/Machine/dotfiles/zsh"
