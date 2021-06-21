@@ -20,6 +20,16 @@ ifeq ($(strip $(CUSTOM_NUM_WORD_ENABLE)), yes)
 	OPT_DEFS += -DCUSTOM_NUM_WORD_ENABLE
 endif
 
+ifeq ($(strip $(CUSTOM_NAV_WORD_ENABLE)), yes)
+	SRC += ./features/nav_word.c
+	OPT_DEFS += -DCUSTOM_NAV_WORD_ENABLE
+endif
+
+ifeq ($(strip $(CUSTOM_SYS_WORD_ENABLE)), yes)
+	SRC += ./features/sys_word.c
+	OPT_DEFS += -DCUSTOM_SYS_WORD_ENABLE
+endif
+
 ifeq ($(strip $(COMBO_ENABLE)), yes)
 	SRC += combos.c
 endif
