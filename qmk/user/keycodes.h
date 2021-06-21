@@ -9,6 +9,7 @@ enum layers
   SYM,
   NUM,
   MUS,
+  SYS,
 };
 
 enum keycodes
@@ -16,6 +17,8 @@ enum keycodes
   o_RPT_o = SAFE_RANGE,
   o_STP_o,
   o_NUM_o,
+  o_NAV_o,
+  o_SYS_o,
 
   // Oneshot mods with no timers.
   o_SFT_o,
@@ -25,8 +28,6 @@ enum keycodes
 };
 
 #define XXXXXXX KC_NO
-// #undef  _______
-// #define _______ KC_NO
 
 #define __NAV__ OSL(NAV)
 #define __NUM__ OSL(NUM)
@@ -139,8 +140,17 @@ enum keycodes
 #define MAC_SELECT_ALL LCMD(KC_A)
 #define MAC_PASTE_MATCH LSFT(LOPT(LCMD(KC_C)))
 
-#define BRI_MIN KC_F14
-#define BRI_MAX KC_F15
+#define _BRIMN_ KC_F14
+#define _BRIMX_ KC_F15
+
+#define _DSKT1_ HYPR(___1___)
+#define _DSKT2_ HYPR(___2___)
+#define _DSKT3_ HYPR(___3___)
+#define _DSKT4_ HYPR(___4___)
+#define _DSKT5_ HYPR(___5___)
+#define _DSKT6_ HYPR(___6___)
+
+#define _SCRSH_ LCMD(LSFT(___4___))
 
 #define m_UP__m KC_MS_UP
 #define m_DWN_m KC_MS_DOWN
