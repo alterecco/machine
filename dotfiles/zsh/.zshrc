@@ -166,11 +166,14 @@ alias find=fd
 alias grep=rg
 alias ag=rg
 alias j=z
+alias ld=lazydocker
+alias lg=lazygit
 
 if [[ $OSTYPE == linux* ]]; then
   alias bat=batcat
 fi
 alias cat=bat
+export BAT_THEME=gruvbox-light
 
 if [[ $OSTYPE == darwin* ]]; then
   alias as-amd="PATH=\"/usr/local/opt/arm-gcc-bin@8/bin:/usr/local/opt/avr-gcc@8/bin:/usr/local/bin:$PATH\" /usr/bin/arch -x86_64"
